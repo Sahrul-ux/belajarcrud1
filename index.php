@@ -40,6 +40,7 @@
         ?>
             <tbody>
                 <tr>
+                    <td><?php echo $no; ?></td>
                     <td><?php echo $data['nama']; ?></td>
                     <td><?php echo $data['alamat']; ?></td>
                     <td><?php echo $data['tempat']; ?></td>
@@ -49,8 +50,8 @@
                     <td><?php echo $data['email']; ?></td>
                     <td><?php echo $data['foto']; ?></td>
                     <td>
-                        <a href="update.php?id=<?php echo $data['id']; ?>">Update</a>
-                        <a href="delete.php?id=<?php echo $data['id']; ?>">delete</a>
+                        <a href="update.php?id=<?php echo $data['id']; ?>">Update</a> |
+                        <a href="delete.php?id=<?php echo $data['id']; ?>">Delete</a>
                     </td>
                 </tr>
             </tbody>
