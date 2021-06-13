@@ -67,6 +67,10 @@
             <td>Foto</td>
             <td><input type="file" name="foto" required></td>
         </tr>
+        <tr>
+            <td><input type="submit" value="Simpan" name="submit"></td>
+            <td><input type="reset" value="Reset"></td>
+        </tr>
     </table>
 </form>
 
