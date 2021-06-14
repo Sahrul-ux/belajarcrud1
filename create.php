@@ -92,6 +92,22 @@
         $tmpFoto = $_FILES['foto']['tmp_name'];
 
         $namaFoto = $nama . '-' . $foto;
+
+        $lokasiFoto = 'upload/';
+
+        $prosesUpload = move_uploaded_file($tmpFoto, $lokasiFoto . $namaFoto);
+
+        if ($prosesUpload) {
+            $perintahSql = "INSERT INTO siswa (nama, alamat, tempat, ttl, agama, no_hp, email, password, foto) VALUES ('$nama','$alamat','$tempat','$ttl','$agama','$no_hp','$email','$password','$foto')";
+
+            $proses = mysqli_query($konek, $perintahSql);
+
+            if ($proses) {
+                header('Location:index.php');
+            } else {
+                echo "<script>alert('Gagal Disimpan')</script>";
+            }
+        }
     }
     ?>
 
