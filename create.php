@@ -85,7 +85,7 @@
         $agama = $_POST['agama'];
         $no_hp = $_POST['no_hp'];
         $email = $_POST['email'];
-        $password = $_POST['password'];
+        $password = md5($_POST['password']);
 
         $foto = $_FILES['foto']['name'];
 
