@@ -18,7 +18,7 @@
         });
     </script>
 </head>
-<h3>CRUD Sederhana</h3>
+<h3>Halaman Update</h3>
 
 <body>
     <form method="post" enctype="multipart/form-data">
