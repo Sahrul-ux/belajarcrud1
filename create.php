@@ -18,9 +18,10 @@
         });
     </script>
 </head>
-<h3>CRUD Sederhana</h3>
+
 
 <body>
+    <h3>CRUD Sederhana</h3>
     <form method="post" enctype="multipart/form-data">
         <table>
             <tr>
