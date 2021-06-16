@@ -105,6 +105,7 @@
     <?php
     include 'koneksi.php';
     if (isset($_POST['submit'])) {
+        $id = $_POST['id'];
         $nama = $_POST['nama'];
         $alamat = $_POST['alamat'];
         $tempat = $_POST['tempat'];
@@ -125,7 +126,9 @@
         $prosesUpload = move_uploaded_file($tmpFoto, $lokasiFoto . $namaFoto);
 
         if ($prosesUpload) {
-            $perintahSql = "INSERT INTO siswa (nama, alamat, tempat, ttl, agama, no_hp, email, password, foto) VALUES ('$nama','$alamat','$tempat','$ttl','$agama','$no_hp','$email','$password','$foto')";
+            unlink($lokasiFoto . $_POST['fotolama']);
+
+            $perintahSql = "UPDATE siswa SET nama='$nama',alamat='$alamat',tempat='$tempat',ttl='$ttl',agama='$agama',no_hp='$no_hp',email='$email',password='$password',foto='$foto' WHERE id = $id)";
 
             $proses = mysqli_query($konek, $perintahSql);
 
